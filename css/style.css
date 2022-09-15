@@ -11,11 +11,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(30, 38%, 92%);
     font-size: 14px;
-    background: hsl(30, 38%, 92%);
     font-family: "Montserrat";
-    margin: 0 1.5rem;
+    margin: 150px;
     min-height: calc(100vs - 0.1px);
 }
 
@@ -23,9 +22,14 @@ img {
     max-width: 100%;
 }
 
+h1 {
+    color: hsl(212, 21%, 14%);
+}
+
 .attribution { 
     font-size: 14px; 
     text-align: center; 
+    margin-top: 2rem;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -35,39 +39,73 @@ img {
     max-width: 600px;
 }
 .container h1 {
-    margin-top: 1rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: hsl(212, 21%, 14%);
 }
 .container article:first-child img{
     border-radius: 1rem 1rem 0 0;
-
+    margin-bottom: -1rem;
 }
 .container article:last-child {
     background-color: #fff;
     padding: 1.5rem;
-    border-radius: 0 0 0 1rem;
-    margin-top: -1rem;
+    border-radius: 0 0 1rem 1rem;
+    
 }
 .container ul {
     display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
+.container ul li:first-child {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.container ul li:last-child {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.container .btn { 
+    background-color: hsl(158, 36%, 37%);
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 0.7rem;
+}
+
+.container .btn img {
+    margin-right: 0.5rem;
+}
+
+.container .btn:hover {
+    background-color: hsl(156, 63%, 15%);
+}
 .container p {
     margin-bottom: 2rem;
 }
-h1 {
-    color: hsl(212, 21%, 14%);
-}
+
 h2 {
     color: hsl(228, 12%, 48%);
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
 
 h1, .price {
-    font-family: Fraunces; 
+    font-family: "Fraunces"; 
 }
 
 button, li {
@@ -79,12 +117,29 @@ ul {
 }
 
 p {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     color: hsl(228, 12%, 48%);
     size: 14px;
+    line-height: 1.8rem;
 }
 
 .price {
     font-family: Fraunces;
     color:hsl(158, 36%, 37%);
+}
+
+
+@media (min-width: 640px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container article:first-child img {
+        border-radius: 0.625rem 0 0 0.625rem;
+        height: 100%;
+    }
+    .container article:last-child {
+        border-radius: 0 0.625rem 0.625rem 0;
+    }
 }
